@@ -6,9 +6,11 @@ using System.Web;
 namespace Employee.Models
 {
     public class EmployeeMaster
-    {
+    {   
+        public long Id { get; set; }
         public string EmployeeNumber { get; set; }
-        public string EmployeeName { get; set; }       
+        public string EmployeeFullName { get; set; }   
+        public string EmployeeNameWithInitial { get; set; }
         public DateTime EmployeeDOB { get; set; }
         public EmpContact EmployeeContact { get; set; }
         public string EmployeeImage
@@ -16,7 +18,7 @@ namespace Employee.Models
 
             get
             {
-                return EmployeeName.Replace(" ", "").ToLower()+ EmployeeNumber+".jpg";
+                return EmployeeFullName.Replace(" ", "").ToLower()+ EmployeeNumber+".jpg";
             }
                 
         }
