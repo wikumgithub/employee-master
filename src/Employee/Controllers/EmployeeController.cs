@@ -1,4 +1,5 @@
 ﻿using Employee.Data;
+using Employee.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +19,12 @@ namespace Employee.Controllers
 
         public ActionResult Index()
         {
-            var _emplist = _empRepository.GetEmployeeList();
+              ViewBag._emplist = _empRepository.GetEmployeeList();
 
-            if (_emplist != null)
-            {
-                return View(_emplist);               
-            }
-            else
-            {
-                return HttpNotFound();
-            }
+           
+             return View();               
+            
+           
         }
 
        

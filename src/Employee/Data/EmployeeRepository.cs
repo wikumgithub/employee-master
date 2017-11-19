@@ -58,7 +58,7 @@ namespace Employee.Data
                     EmployeeHomeNo = 01128975656,
                     EmployeeEmail = "jehan@gmail.com"
                 }
-            },
+            }
         };
 
 

@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Employee Details";
+}
+
+
+
+<div class="table">
+    @if (ViewBag._emplist != null)
+    {
+        foreach (var item in ViewBag._emplist)
+
+        {
+            
+        <ul>
+            <li>@Html.ActionLink((String)item.EmployeeFullName,"EmployeeDetails","Employee",new{item.Id},null) </li>
+        </ul>
+        }
+    }
+
+    
+
+</div>
+
